@@ -7,10 +7,13 @@ app = Flask("Emotion Detector")
 def emo_detector():
     text_to_analyze = request.args.get('textToAnalyze')
     response = emotion_detector(text_to_analyze)
+    
     response_copy = response.copy()
-    dominant_emotion = response_copy.pop('dominant_emotion')  # Get and remove
-    return f"For the given statement, the system response is {response_copy}. The dominant emotion is {dominant_emotion}."
-
+    dominant_emotion = response_copy.pop('dominant_emotion')
+    string = f"For the given statement, the system response is {response_copy}. The dominant emotion is {dominant_emotion}."
+    response_dict = {'system_response': string}
+    return jsonify(response_dict)  # Use jsonify to return JSON
+    
 @app.route("/")
 def render_index_page():
     return render_template('index.html')
