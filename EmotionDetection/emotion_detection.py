@@ -24,7 +24,11 @@ def emotion_detector(text_to_analyse):
     #export PS1="[\[\033[01;32m\]\u\[\033[00m\]: \[\033[01;34m\]\W\[\033[00m\]]\$ "
     #python3.11
     #from EmotionDetection.emotion_detection import emotion_detector (creates pychache)
-
-
-    #emotion_detector("I love this new technology")
+    #import requests
+    #import json
+    #pip install flask
+    #result = emotion_detector("I love this new technology")
     #print(json.dumps(result, indent=4)) 
+    #exit()
+    #export FLASK_APP=server.py
+    #run flask
