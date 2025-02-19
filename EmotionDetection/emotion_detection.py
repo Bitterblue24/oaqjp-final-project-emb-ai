@@ -32,3 +32,5 @@ def emotion_detector(text_to_analyse):
     #exit()
     #export FLASK_APP=server.py
     #run flask
+#make sure package has a pychache
+#make surethere are node-moduals: flask and package-io
