@@ -34,3 +34,4 @@ def emotion_detector(text_to_analyse):
     #run flask
 #make sure package has a pychache
 #make surethere are node-moduals: flask and package-io
+#also theres a venv folder. not sure if its important
