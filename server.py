@@ -10,9 +10,11 @@ def emo_detector():
     
     response_copy = response.copy()
     dominant_emotion = response_copy.pop('dominant_emotion')
-    string = f"For the given statement, the system response is {response_copy}. The dominant emotion is {dominant_emotion}."
-    response_dict = {'system_response': string}
-    return jsonify(response_dict)  # Use jsonify to return JSON
+    response_string = str(response_copy)
+    emotion_list = response_string[1:-1]
+    string = f"For the given statement, the system response is {emotion_list}. The dominant emotion is {dominant_emotion}."
+    complete_response = string
+    return complete_response
     
 @app.route("/")
 def render_index_page():
